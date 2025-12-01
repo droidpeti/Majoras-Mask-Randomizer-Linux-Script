@@ -51,7 +51,19 @@ fi
 
 # 5. Fix UI Glitches
 echo "[+] Applying 'Virtual Desktop' fix (1280x960)..."
-WINEPREFIX="$PREFIX_DIR" winetricks vd=1280x960 > /dev/null 2>&1
+cat << EOF > virtual_desktop.reg
+REGEDIT4
+
+[HKEY_CURRENT_USER\Software\Wine\Explorer]
+"Desktop"="Default"
+
+[HKEY_CURRENT_USER\Software\Wine\Explorer\Desktops]
+"Default"="1280x960"
+EOF
+
+WINEPREFIX="$PREFIX_DIR" wine regedit virtual_desktop.reg
+
+rm virtual_desktop.reg
 
 # 6. Download Randomizer
 if [ ! -f "MajoraRandomizer.exe" ] && [ ! -f "MM Randomizer.exe" ]; then
