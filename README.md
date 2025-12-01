@@ -8,9 +8,16 @@ A simple script to install ZoeyZolotova's MM Randomizer on Linux using Wine.
 
 ## How to Use
 1. Download the script:
+   ```
    wget https://raw.githubusercontent.com/droidpeti/Majoras-Mask-Randomizer-Linux-Script/main/mm_setup.sh
+   ```
+
 2. Make it executable:
+   ```
    chmod +x mm_setup.sh
+   ```
 3. Run it:
+   ```
    ./mm_setup.sh
+   ```
    
