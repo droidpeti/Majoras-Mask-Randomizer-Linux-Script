@@ -20,4 +20,10 @@ A simple script to install ZoeyZolotova's MM Randomizer on Linux using Wine.
    ```
    ./mm_setup.sh
    ```
+
+Or if you get a strange exception:
+
+   ```
+   DOTNET_SYSTEM_GLOBALIZATION_INVARIANT=1 ./launch_mmr.sh
+   ```
    
